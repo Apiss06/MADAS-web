@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MADAS Makaroni Pedas — Sensasi Pedas yang Meledak!!</title>
+    
+    <!-- Google Fonts: Anton untuk heading yang tegas & Plus Jakarta Sans untuk teks yang modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Konfigurasi Tailwind Custom Colors & Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Anton', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        madas: {
+                            black: '#0B0B0C',
+                            dark: '#141416',
+                            card: '#1C1C20',
+                            yellow: '#FFB703',
+                            orange: '#FB8500',
+                            red: '#D62828',
+                            crimson: '#E63946',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2.5s infinite',
+                        'flicker': 'flicker 1.8s infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-12px) rotate(2deg)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(251, 133, 0, 0.45)' },
+                            '50%': { boxShadow: '0 0 38px rgba(214, 40, 40, 0.8)' },
+                        },
+                        flicker: {
+                            '0%': { transform: 'scale(1) skewX(0deg)', opacity: '0.95' },
+                            '100%': { transform: 'scale(1.04) skewX(-1.5deg)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar & Styling Tambahan */
+        body {
+            background-color: #0B0B0C;
+            color: #F8F9FA;
+            overflow-x: hidden;
+        }
+
+        .fire-gradient-text {
+            background: linear-gradient(180deg, #FFD166 0%, #FFB703 45%, #FB8500 80%, #E63946 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .fire-bg-gradient {
+            background: linear-gradient(135deg, #FFB703 0%, #FB8500 50%, #D62828 100%);
+        }
+
+        .hero-radial {
+            background: radial-gradient(circle at 70% 45%, rgba(214, 40, 40, 0.25) 0%, rgba(251, 133, 0, 0.12) 35%, rgba(11, 11, 12, 0) 70%);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            border-color: #FB8500;
+            box-shadow: 0 14px 30px -10px rgba(251, 133, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-madas-orange selection:text-black">
+
+    <!-- ==================== STICKY NAVBAR ==================== -->
+    <header class="sticky top-0 z-40 bg-madas-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo (Exact SVG Flaming Macaroni MADAS) -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-16 h-14 rounded-xl bg-black border border-madas-orange/40 flex items-center justify-center p-1 shadow-lg group-hover:scale-105 transition-transform">
+                    <svg viewBox="0 0 340 275" class="w-full h-full overflow-visible" aria-label="Logo MADAS Makaroni Pedas">
+                        <!-- Kobaran Api Merah Menyala -->
+                        <g fill="#D41414" class="animate-flicker">
+                            <!-- Api Kiri -->
+                            <path d="M98,158 C78,155 62,140 58,118 C54,95 62,72 52,55 C65,62 72,72 72,58 C72,40 82,25 78,12 C92,24 96,42 102,32 C108,22 108,10 105,4 C118,15 122,34 128,28 C134,22 135,12 133,6 C145,18 148,38 142,58 C136,78 122,92 126,112 C130,126 144,124 150,114 C154,128 146,146 132,154 Z"/>
+                            <!-- Lidah Api Kecil Kiri -->
+                            <path d="M48,108 C42,102 42,92 48,86 C47,94 52,98 54,104 Z"/>
+                            <!-- Api Kanan -->
+                            <path d="M168,75 C175,58 188,48 184,34 C194,42 198,52 204,44 C210,36 208,24 205,18 C218,26 222,42 228,36 C234,30 236,20 234,14 C246,24 248,42 254,38 C260,34 264,25 262,18 C272,30 270,50 278,56 C284,60 288,52 290,46 C294,62 286,78 292,94 C298,110 296,132 282,148 C272,158 258,162 246,156 C248,136 244,114 226,104 C208,94 186,98 172,88 Z"/>
+                            <!-- Percikan Api Atas Kanan -->
+                            <path d="M214,22 C222,12 238,10 248,16 C238,16 232,22 226,26 Z"/>
+                            <path d="M256,28 C264,22 274,24 278,32 C270,30 264,32 258,34 Z"/>
+                        </g>
+
+                        <!-- Potongan Makaroni Kiri -->
+                        <g>
+                            <path d="M108,42 C82,58 72,96 86,128 C98,154 128,168 158,164 C172,162 178,146 168,135 C146,138 124,128 116,108 C108,88 116,66 132,56 C140,50 122,34 108,42 Z" fill="#FFC845"/>
+                            <!-- Highlight Lengkung Kiri -->
+                            <path d="M98,74 C92,92 96,114 108,130" fill="none" stroke="#FFE28A" stroke-width="5" stroke-linecap="round"/>
+                            <!-- Lubang Oval Ujung Atas Kiri -->
+                            <ellipse cx="121" cy="51" rx="14" ry="9" transform="rotate(-38 121 51)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                            <!-- Lubang Oval Ujung Bawah Kiri -->
+                            <ellipse cx="163" cy="149" rx="14" ry="9" transform="rotate(32 163 149)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                        </g>
+
+                        <!-- Potongan Makaroni Kanan -->
+                        <g>
+                            <path d="M154,94 C178,72 218,70 246,92 C270,110 278,142 266,166 C260,178 242,176 236,164 C244,144 238,122 220,110 C202,98 180,102 168,116 C160,124 142,105 154,94 Z" fill="#FFC845"/>
+                            <!-- Highlight Lengkung Kanan -->
+                            <path d="M192,86 C212,84 232,92 246,108" fill="none" stroke="#FFE28A" stroke-width="5" stroke-linecap="round"/>
+                            <!-- Lubang Oval Ujung Kiri -->
+                            <ellipse cx="160" cy="105" rx="14" ry="9" transform="rotate(42 160 105)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                            <!-- Lubang Oval Ujung Bawah Kanan -->
+                            <ellipse cx="251" cy="166" rx="14" ry="9" transform="rotate(-30 251 166)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                        </g>
+
+                        <!-- Teks "MADAS" Bergaya Api / Bergerigi dengan Bayangan 3D Merah -->
+                        <g transform="translate(0, 8)">
+                            <!-- Shadow Merah -->
+                            <g fill="#C81010" transform="translate(4, 6)">
+                                <!-- M -->
+                                <path d="M22,250 L24,202 L20,194 L27,198 L30,190 L38,210 L44,218 L50,206 L55,190 L60,198 L66,192 L68,250 L54,250 L53,220 L44,236 L35,220 L34,250 Z"/>
+                                <!-- A -->
+                                <path d="M76,250 L88,196 L92,190 L96,196 L101,189 L106,196 L120,250 L105,250 L102,238 L90,238 L88,250 Z M93,225 L100,225 L96,208 Z"/>
+                                <!-- D -->
+                                <path d="M128,250 L129,195 L134,191 L139,195 L146,189 L152,195 C168,197 176,208 176,223 C176,239 167,250 148,250 Z M143,237 L149,237 C158,237 162,231 162,223 C162,214 158,208 149,208 L143,208 Z"/>
+                                <!-- A -->
+                                <path d="M182,250 L194,196 L198,190 L202,196 L207,189 L212,196 L226,250 L211,250 L208,238 L196,238 L194,250 Z M199,225 L206,225 L202,208 Z"/>
+                                <!-- S -->
+                                <path d="M232,236 L245,233 C247,238 252,240 258,240 C264,240 267,237 267,233 C267,229 262,228 253,226 C240,223 233,218 233,207 C233,196 242,190 254,190 L258,185 L263,191 L269,187 L273,193 L278,191 L277,204 L264,206 C262,202 259,200 254,200 C249,200 247,202 247,206 C247,209 251,211 260,213 C273,216 281,221 281,232 C281,244 271,251 257,251 C243,251 234,245 232,236 Z"/>
+                            </g>
+                            <!-- Teks Utama Kuning Keemasan -->
+                            <g fill="#FFC845">
+                                <!-- M -->
+                                <path d="M22,250 L24,202 L20,194 L27,198 L30,190 L38,210 L44,218 L50,206 L55,190 L60,198 L66,192 L68,250 L54,250 L53,220 L44,236 L35,220 L34,250 Z"/>
+                                <!-- A -->
+                                <path d="M76,250 L88,196 L92,190 L96,196 L101,189 L106,196 L120,250 L105,250 L102,238 L90,238 L88,250 Z M93,225 L100,225 L96,208 Z"/>
+                                <!-- D -->
+                                <path d="M128,250 L129,195 L134,191 L139,195 L146,189 L152,195 C168,197 176,208 176,223 C176,239 167,250 148,250 Z M143,237 L149,237 C158,237 162,231 162,223 C162,214 158,208 149,208 L143,208 Z"/>
+                                <!-- A -->
+                                <path d="M182,250 L194,196 L198,190 L202,196 L207,189 L212,196 L226,250 L211,250 L208,238 L196,238 L194,250 Z M199,225 L206,225 L202,208 Z"/>
+                                <!-- S -->
+                                <path d="M232,236 L245,233 C247,238 252,240 258,240 C264,240 267,237 267,233 C267,229 262,228 253,226 C240,223 233,218 233,207 C233,196 242,190 254,190 L258,185 L263,191 L269,187 L273,193 L278,191 L277,204 L264,206 C262,202 259,200 254,200 C249,200 247,202 247,206 C247,209 251,211 260,213 C273,216 281,221 281,232 C281,244 271,251 257,251 C243,251 234,245 232,236 Z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-display text-3xl tracking-wider fire-gradient-text leading-none block">MADAS</span>
+                    <span class="text-[11px] font-bold tracking-widest uppercase text-gray-400 block -mt-0.5">Makaroni Pedas</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300">
+                <a href="#varian" class="hover:text-madas-yellow transition-colors">Varian Rasa</a>
+                <a href="#kenapa" class="hover:text-madas-yellow transition-colors">Kenapa MADAS?</a>
+                <a href="#kuis-pedas" class="hover:text-madas-yellow transition-colors flex items-center gap-1.5">
+                    <span>Cek Levelmu</span>
+                    <span class="px-1.5 py-0.5 text-[10px] font-extrabold bg-madas-red text-white rounded-full">SERU</span>
+                </a>
+                <a href="#testimoni" class="hover:text-madas-yellow transition-colors">Kata Netizen</a>
+            </nav>
+
+            <!-- Action Buttons (Cart & Order CTA) -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleCart()" aria-label="Buka Keranjang Belanja" class="relative p-3 rounded-xl bg-madas-card hover:bg-white/10 border border-white/10 transition-colors cursor-pointer">
+                    <svg class="w-5 h-5 text-madas-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                    <span id="cart-badge" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-madas-red text-white text-[11px] font-extrabold flex items-center justify-center shadow">0</span>
+                </button>
+
+                <a href="#varian" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl fire-bg-gradient text-black font-extrabold text-sm tracking-wide hover:brightness-110 transition-all shadow-lg">
+                    <span>Pesan Sekarang</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu Navigasi" class="md:hidden p-2.5 rounded-xl bg-madas-card border border-white/10 text-gray-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-madas-dark border-b border-white/10 px-4 pt-3 pb-5 space-y-2">
+            <a href="#varian" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-lg hover:bg-white/5 font-semibold text-gray-200">Varian Rasa & Level</a>
+            <a href="#kenapa" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-lg hover:bg-white/5 font-semibold text-gray-200">Kenapa MADAS?</a>
+            <a href="#kuis-pedas" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-lg hover:bg-white/5 font-semibold text-madas-yellow">Cek Seberapa Tahan Pedasmu</a>
+            <a href="#testimoni" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-lg hover:bg-white/5 font-semibold text-gray-200">Testimoni Gen Z</a>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 hero-radial overflow-hidden">
+        <!-- Decorative Fire Sparks -->
+        <div class="absolute top-20 left-10 w-2 h-2 rounded-full bg-madas-yellow opacity-60 animate-ping"></div>
+        <div class="absolute bottom-24 right-1/3 w-3 h-3 rounded-full bg-madas-red opacity-50 animate-pulse"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-madas-red/20 border border-madas-red/40 text-madas-yellow text-xs sm:text-sm font-bold tracking-wide">
+                    <span>🔥</span>
+                    <span>CAMILAN PEDAS FAVORIT MILENIAL & GEN Z</span>
+                </div>
+
+                <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.03]">
+                    SENSASI PEDAS <br>
+                    <span class="fire-gradient-text">YANG MELEDAK!!</span>
+                </h1>
+
+                <p class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Setiap gigitan <strong class="text-white">MADAS Makaroni Pedas</strong> menghadirkan kejutan bumbu cabai asli Indonesia yang berani, super renyah, dan bikin nagih. Berani terima tantangannya?
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#varian" class="w-full sm:w-auto px-8 py-4 rounded-2xl fire-bg-gradient text-black font-extrabold text-base tracking-wide animate-pulse-glow hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                        <span>COBA SEKARANG</span>
+                        <span>🔥</span>
+                    </a>
+                    <a href="#kuis-pedas" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-madas-card hover:bg-white/10 border border-white/15 text-white font-bold text-base transition-all flex items-center justify-center gap-2">
+                        <span>Tes Level Pedasmu</span>
+                    </a>
+                </div>
+
+                <!-- Quick Social Proof Metrics -->
+                <div class="pt-6 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 border-t border-white/10">
+                    <div>
+                        <p class="font-display text-2xl sm:text-3xl text-madas-yellow">100%</p>
+                        <p class="text-xs text-gray-400 font-medium">Cabai Asli Lokal</p>
+                    </div>
+                    <div>
+                        <p class="font-display text-2xl sm:text-3xl text-madas-orange">4 LEVEL</p>
+                        <p class="text-xs text-gray-400 font-medium">Santuy s/d Jahanam</p>
+                    </div>
+                    <div>
+                        <p class="font-display text-2xl sm:text-3xl text-madas-crimson">4.9 ★</p>
+                        <p class="text-xs text-gray-400 font-medium">Rating Pecinta Pedas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Visual Showcase (Interactive Flaming Macaroni Art + Quick Level Preview) -->
+            <div class="lg:col-span-5 flex flex-col items-center">
+                <div class="relative w-full max-w-md bg-black border-2 border-madas-orange/45 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                    <!-- Badge -->
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 rounded-full bg-madas-yellow/15 text-madas-yellow text-xs font-extrabold uppercase tracking-wider">Official Logo</span>
+                        <span id="hero-heat-label" class="text-xs font-bold text-madas-crimson">Level 5 • Pedas Meledak</span>
+                    </div>
+
+                    <!-- Exact Illustrated Flaming Macaroni MADAS Logo -->
+                    <div class="relative h-64 sm:h-72 flex items-center justify-center animate-float">
+                        <div id="hero-glow-circle" class="absolute w-48 h-48 rounded-full bg-madas-red/30 blur-2xl transition-colors duration-500"></div>
+                        <svg viewBox="0 0 340 275" class="w-72 sm:w-80 h-auto relative z-10 drop-shadow-[0_12px_28px_rgba(212,20,20,0.65)]" aria-label="Logo MADAS Makaroni Pedas">
+                            <!-- Kobaran Api Merah Menyala -->
+                            <g fill="#D41414" class="animate-flicker">
+                                <!-- Api Kiri -->
+                                <path d="M98,158 C78,155 62,140 58,118 C54,95 62,72 52,55 C65,62 72,72 72,58 C72,40 82,25 78,12 C92,24 96,42 102,32 C108,22 108,10 105,4 C118,15 122,34 128,28 C134,22 135,12 133,6 C145,18 148,38 142,58 C136,78 122,92 126,112 C130,126 144,124 150,114 C154,128 146,146 132,154 Z"/>
+                                <!-- Lidah Api Kecil Kiri -->
+                                <path d="M48,108 C42,102 42,92 48,86 C47,94 52,98 54,104 Z"/>
+                                <!-- Api Kanan -->
+                                <path d="M168,75 C175,58 188,48 184,34 C194,42 198,52 204,44 C210,36 208,24 205,18 C218,26 222,42 228,36 C234,30 236,20 234,14 C246,24 248,42 254,38 C260,34 264,25 262,18 C272,30 270,50 278,56 C284,60 288,52 290,46 C294,62 286,78 292,94 C298,110 296,132 282,148 C272,158 258,162 246,156 C248,136 244,114 226,104 C208,94 186,98 172,88 Z"/>
+                                <!-- Percikan Api Atas Kanan -->
+                                <path d="M214,22 C222,12 238,10 248,16 C238,16 232,22 226,26 Z"/>
+                                <path d="M256,28 C264,22 274,24 278,32 C270,30 264,32 258,34 Z"/>
+                            </g>
+
+                            <!-- Potongan Makaroni Kiri -->
+                            <g>
+                                <path d="M108,42 C82,58 72,96 86,128 C98,154 128,168 158,164 C172,162 178,146 168,135 C146,138 124,128 116,108 C108,88 116,66 132,56 C140,50 122,34 108,42 Z" fill="#FFC845"/>
+                                <!-- Highlight Lengkung Kiri -->
+                                <path d="M98,74 C92,92 96,114 108,130" fill="none" stroke="#FFE28A" stroke-width="5" stroke-linecap="round"/>
+                                <!-- Lubang Oval Ujung Atas Kiri -->
+                                <ellipse cx="121" cy="51" rx="14" ry="9" transform="rotate(-38 121 51)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                                <!-- Lubang Oval Ujung Bawah Kiri -->
+                                <ellipse cx="163" cy="149" rx="14" ry="9" transform="rotate(32 163 149)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                            </g>
+
+                            <!-- Potongan Makaroni Kanan -->
+                            <g>
+                                <path d="M154,94 C178,72 218,70 246,92 C270,110 278,142 266,166 C260,178 242,176 236,164 C244,144 238,122 220,110 C202,98 180,102 168,116 C160,124 142,105 154,94 Z" fill="#FFC845"/>
+                                <!-- Highlight Lengkung Kanan -->
+                                <path d="M192,86 C212,84 232,92 246,108" fill="none" stroke="#FFE28A" stroke-width="5" stroke-linecap="round"/>
+                                <!-- Lubang Oval Ujung Kiri -->
+                                <ellipse cx="160" cy="105" rx="14" ry="9" transform="rotate(42 160 105)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                                <!-- Lubang Oval Ujung Bawah Kanan -->
+                                <ellipse cx="251" cy="166" rx="14" ry="9" transform="rotate(-30 251 166)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                            </g>
+
+                            <!-- Teks "MADAS" Bergaya Api / Bergerigi dengan Bayangan 3D Merah -->
+                            <g transform="translate(0, 8)">
+                                <!-- Shadow Merah -->
+                                <g fill="#C81010" transform="translate(4, 6)">
+                                    <!-- M -->
+                                    <path d="M22,250 L24,202 L20,194 L27,198 L30,190 L38,210 L44,218 L50,206 L55,190 L60,198 L66,192 L68,250 L54,250 L53,220 L44,236 L35,220 L34,250 Z"/>
+                                    <!-- A -->
+                                    <path d="M76,250 L88,196 L92,190 L96,196 L101,189 L106,196 L120,250 L105,250 L102,238 L90,238 L88,250 Z M93,225 L100,225 L96,208 Z"/>
+                                    <!-- D -->
+                                    <path d="M128,250 L129,195 L134,191 L139,195 L146,189 L152,195 C168,197 176,208 176,223 C176,239 167,250 148,250 Z M143,237 L149,237 C158,237 162,231 162,223 C162,214 158,208 149,208 L143,208 Z"/>
+                                    <!-- A -->
+                                    <path d="M182,250 L194,196 L198,190 L202,196 L207,189 L212,196 L226,250 L211,250 L208,238 L196,238 L194,250 Z M199,225 L206,225 L202,208 Z"/>
+                                    <!-- S -->
+                                    <path d="M232,236 L245,233 C247,238 252,240 258,240 C264,240 267,237 267,233 C267,229 262,228 253,226 C240,223 233,218 233,207 C233,196 242,190 254,190 L258,185 L263,191 L269,187 L273,193 L278,191 L277,204 L264,206 C262,202 259,200 254,200 C249,200 247,202 247,206 C247,209 251,211 260,213 C273,216 281,221 281,232 C281,244 271,251 257,251 C243,251 234,245 232,236 Z"/>
+                                </g>
+                                <!-- Teks Utama Kuning Keemasan -->
+                                <g fill="#FFC845">
+                                    <!-- M -->
+                                    <path d="M22,250 L24,202 L20,194 L27,198 L30,190 L38,210 L44,218 L50,206 L55,190 L60,198 L66,192 L68,250 L54,250 L53,220 L44,236 L35,220 L34,250 Z"/>
+                                    <!-- A -->
+                                    <path d="M76,250 L88,196 L92,190 L96,196 L101,189 L106,196 L120,250 L105,250 L102,238 L90,238 L88,250 Z M93,225 L100,225 L96,208 Z"/>
+                                    <!-- D -->
+                                    <path d="M128,250 L129,195 L134,191 L139,195 L146,189 L152,195 C168,197 176,208 176,223 C176,239 167,250 148,250 Z M143,237 L149,237 C158,237 162,231 162,223 C162,214 158,208 149,208 L143,208 Z"/>
+                                    <!-- A -->
+                                    <path d="M182,250 L194,196 L198,190 L202,196 L207,189 L212,196 L226,250 L211,250 L208,238 L196,238 L194,250 Z M199,225 L206,225 L202,208 Z"/>
+                                    <!-- S -->
+                                    <path d="M232,236 L245,233 C247,238 252,240 258,240 C264,240 267,237 267,233 C267,229 262,228 253,226 C240,223 233,218 233,207 C233,196 242,190 254,190 L258,185 L263,191 L269,187 L273,193 L278,191 L277,204 L264,206 C262,202 259,200 254,200 C249,200 247,202 247,206 C247,209 251,211 260,213 C273,216 281,221 281,232 C281,244 271,251 257,251 C243,251 234,245 232,236 Z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <!-- Interactive Quick Spice Previewer -->
+                    <div class="mt-4 bg-black/70 border border-white/10 rounded-2xl p-4">
+                        <p class="text-xs text-gray-400 font-semibold mb-2.5 text-center">Klik untuk simulasi sensasi pedas:</p>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button onclick="previewSpice(1, 'Level 1 • Pedas Santuy', 'rgba(255, 183, 3, 0.35)')" class="py-2 px-1 rounded-xl bg-madas-card hover:bg-madas-yellow hover:text-black text-xs font-bold transition-colors cursor-pointer">Lv. 1</button>
+                            <button onclick="previewSpice(3, 'Level 3 • Daun Jeruk Nampol', 'rgba(251, 133, 0, 0.45)')" class="py-2 px-1 rounded-xl bg-madas-card hover:bg-madas-orange hover:text-black text-xs font-bold transition-colors cursor-pointer">Lv. 3</button>
+                            <button onclick="previewSpice(5, 'Level 5 • Pedas Meledak', 'rgba(214, 40, 40, 0.55)')" class="py-2 px-1 rounded-xl bg-madas-red text-white text-xs font-bold transition-colors cursor-pointer">Lv. 5</button>
+                            <button onclick="previewSpice(10, 'Level 10 • Neraka Jahanam', 'rgba(230, 57, 70, 0.75)')" class="py-2 px-1 rounded-xl bg-madas-card hover:bg-madas-crimson hover:text-white text-xs font-bold transition-colors cursor-pointer">Lv. 10</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VARIAN RASA & LEVEL PEDAS ==================== -->
+    <section id="varian" class="py-20 bg-madas-dark border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-madas-orange font-extrabold text-xs tracking-widest uppercase">PILIH TANTANGANMU</span>
+                <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">
+                    VARIAN RASA & <span class="fire-gradient-text">LEVEL PEDAS</span>
+                </h2>
+                <p class="text-gray-400 mt-3 text-sm sm:text-base">
+                    Diracik dengan cabai asli pilihan dan rempah autentik Indonesia. Pilih level yang pas buat nemenin nongkrong atau nugasmu!
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2.5 mb-10">
+                <button onclick="filterProducts('all')" data-filter="all" class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-madas-yellow text-black transition-all cursor-pointer">Semua Varian</button>
+                <button onclick="filterProducts('mild')" data-filter="mild" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-madas-card text-gray-300 hover:text-white border border-white/10 transition-all cursor-pointer">Pedas Santuy (Lv. 1-3)</button>
+                <button onclick="filterProducts('extreme')" data-filter="extreme" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-madas-card text-gray-300 hover:text-white border border-white/10 transition-all cursor-pointer">Pedas Meledak (Lv. 5-10)</button>
+            </div>
+
+            <!-- Product Grid (Rendered via JS) -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cards injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== KENAPA MADAS? (VALUE PROPOSITION) ==================== -->
+    <section id="kenapa" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-madas-yellow font-extrabold text-xs tracking-widest uppercase">BEDA DARI YANG LAIN</span>
+                <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">
+                    KENAPA HARUS <span class="fire-gradient-text">MADAS?</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-madas-card border border-white/10 rounded-3xl p-7 card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-madas-red/20 border border-madas-red/40 flex items-center justify-center text-3xl mb-5">
+                        🌶️
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white mb-2">100% Cabai Asli Lokal</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Bukan sekadar perasa buatan! Kami memakai cabai merah dan rawit asli Indonesia untuk sensasi pedas otentik yang nendang.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-madas-card border border-white/10 rounded-3xl p-7 card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-madas-yellow/20 border border-madas-yellow/40 flex items-center justify-center text-3xl mb-5">
+                        💥
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white mb-2">Super Renyah Anti Alot</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Digoreng dengan teknik khusus sehingga menghasilkan tekstur kriuk maksimal yang bikin mulut nggak mau berhenti ngunyah.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-madas-card border border-white/10 rounded-3xl p-7 card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-madas-orange/20 border border-madas-orange/40 flex items-center justify-center text-3xl mb-5">
+                        🎒
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white mb-2">Teman Nongkrong & Nugas</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Kemasan pouch praktis dengan ziplock kedap udara. Gampang dibawa ke kampus, tongkrongan, atau teman maraton drakor.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-madas-card border border-white/10 rounded-3xl p-7 card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-3xl mb-5">
+                        💸
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white mb-2">Harga Ramah Kantong</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Kualitas premium dengan harga mulai Rp 12 ribuan aja. Aman buat kantong pelajar dan mahasiswa di akhir bulan!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE SPICE QUIZ (GEN Z ENGAGEMENT) ==================== -->
+    <section id="kuis-pedas" class="py-20 bg-gradient-to-b from-madas-dark to-madas-black border-y border-white/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-madas-card border-2 border-madas-orange/40 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                <div class="text-center mb-8">
+                    <span class="px-3 py-1 rounded-full bg-madas-red/20 text-madas-yellow text-xs font-extrabold uppercase tracking-wider">Mini Quiz Interaktif</span>
+                    <h2 class="font-display text-3xl sm:text-4xl uppercase mt-3">
+                        CEK SEBERAPA TAHAN <span class="fire-gradient-text">PEDASMU!</span>
+                    </h2>
+                    <p class="text-gray-400 text-sm mt-2">Jawab 2 pertanyaan singkat ini biar kami pilihkan varian MADAS yang paling cocok sama kamu.</p>
+                </div>
+
+                <!-- Quiz Container -->
+                <div id="quiz-container" class="space-y-6">
+                    <!-- Question 1 -->
+                    <div>
+                        <p class="font-bold text-white text-base mb-3">1. Lagi ngapain kamu sekarang?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <button onclick="selectQuizOption('activity', 'santai', this)" class="quiz-btn-activity p-3.5 rounded-2xl bg-black/60 border border-white/15 hover:border-madas-yellow text-left text-sm font-semibold transition-all cursor-pointer">
+                                🎬 Santai / Nonton Film
+                            </button>
+                            <button onclick="selectQuizOption('activity', 'nugas', this)" class="quiz-btn-activity p-3.5 rounded-2xl bg-black/60 border border-white/15 hover:border-madas-yellow text-left text-sm font-semibold transition-all cursor-pointer">
+                                💻 Nugas / Lembur Kerja
+                            </button>
+                            <button onclick="selectQuizOption('activity', 'nongkrong', this)" class="quiz-btn-activity p-3.5 rounded-2xl bg-black/60 border border-white/15 hover:border-madas-yellow text-left text-sm font-semibold transition-all cursor-pointer">
+                                🔥 Nongkrong Adu Nyali
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div>
+                        <p class="font-bold text-white text-base mb-3">2. Kalau makan seblak atau geprek, kamu tim level berapa?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <button onclick="selectQuizOption('tolerance', 'low', this)" class="quiz-btn-tolerance p-3.5 rounded-2xl bg-black/60 border border-white/15 hover:border-madas-yellow text-left text-sm font-semibold transition-all cursor-pointer">
+                                😌 Pedas Manis / Sedang
+                            </button>
+                            <button onclick="selectQuizOption('tolerance', 'mid', this)" class="quiz-btn-tolerance p-3.5 rounded-2xl bg-black/60 border border-white/15 hover:border-madas-yellow text-left text-sm font-semibold transition-all cursor-pointer">
+                                🥵 Pedas Nampol Bikin Keringetan
+                            </button>
+                            <button onclick="selectQuizOption('tolerance', 'high', this)" class="quiz-btn-tolerance p-3.5 rounded-2xl bg-black/60 border border-white/15 hover:border-madas-yellow text-left text-sm font-semibold transition-all cursor-pointer">
+                                😈 Pedas Ekstrem Tanpa Ampun
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Submit Quiz Button -->
+                    <div class="pt-2 text-center">
+                        <button onclick="calculateRecommendation()" class="px-8 py-3.5 rounded-2xl fire-bg-gradient text-black font-extrabold text-sm sm:text-base tracking-wide hover:brightness-110 transition-all cursor-pointer shadow-lg">
+                            Lihat Rekomendasi Varianmu 🔥
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Result Box (Hidden by default) -->
+                <div id="quiz-result" class="hidden mt-8 p-6 rounded-2xl bg-black/80 border border-madas-yellow/50 text-center space-y-4">
+                    <p class="text-xs font-extrabold uppercase tracking-widest text-madas-yellow">JODOH CAMILANMU ADALAH:</p>
+                    <h3 id="rec-title" class="font-display text-3xl text-white uppercase"></h3>
+                    <p id="rec-desc" class="text-sm text-gray-300 max-w-lg mx-auto"></p>
+                    <div class="pt-2 flex flex-col sm:flex-row justify-center gap-3">
+                        <button id="rec-add-btn" class="px-6 py-3 rounded-xl fire-bg-gradient text-black font-extrabold text-sm hover:brightness-110 transition-all cursor-pointer">
+                            + Masukkan ke Keranjang
+                        </button>
+                        <button onclick="resetQuiz()" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-gray-300 text-sm font-bold transition-all cursor-pointer">
+                            Ulangi Kuis
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONI NETIZEN & GEN Z ==================== -->
+    <section id="testimoni" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-madas-orange font-extrabold text-xs tracking-widest uppercase">JUJUR DARI HATI</span>
+                <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">
+                    KATA <span class="fire-gradient-text">NETIZEN & GEN Z</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-madas-card border border-white/10 rounded-3xl p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-madas-yellow text-black font-extrabold flex items-center justify-center">A</div>
+                            <div>
+                                <p class="font-bold text-sm text-white">@alya.nugasterus</p>
+                                <p class="text-xs text-gray-400">Mahasiswi • Jakarta</p>
+                            </div>
+                        </div>
+                        <span class="text-madas-yellow text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        "Gila sih yang Level 3 Daun Jeruk wanginya semerbak banget! Kriuknya dapet, nggak keras sama sekali. Sekali buka bungkus langsung ludes pas ngerjain skripsi."
+                    </p>
+                    <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-[11px] font-semibold text-madas-orange">Beli: Lv. 3 Daun Jeruk Nampol</span>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-madas-card border border-white/10 rounded-3xl p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-madas-red text-white font-extrabold flex items-center justify-center">R</div>
+                            <div>
+                                <p class="font-bold text-sm text-white">@rizky_gamers</p>
+                                <p class="text-xs text-gray-400">Content Creator • Bandung</p>
+                            </div>
+                        </div>
+                        <span class="text-madas-yellow text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        "Beneran sesuai slogannya, pedasnya meledak di mulut! Gue coba Level 10 Neraka Jahanam bareng temen tongkrongan, langsung pada keringetan tapi tetep nagih."
+                    </p>
+                    <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-[11px] font-semibold text-madas-crimson">Beli: Lv. 10 Neraka Jahanam</span>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-madas-card border border-white/10 rounded-3xl p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-madas-orange text-black font-extrabold flex items-center justify-center">N</div>
+                            <div>
+                                <p class="font-bold text-sm text-white">@nadia.foodie</p>
+                                <p class="text-xs text-gray-400">TikTok Reviewer • Surabaya</p>
+                            </div>
+                        </div>
+                        <span class="text-madas-yellow text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        "Bumbu cabai aslinya kerasa banget, nggak cuma asin micin doang. Kemasannya juga cakep dan ada ziplock-nya, wajib restock tiap minggu!"
+                    </p>
+                    <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-[11px] font-semibold text-madas-yellow">Beli: Paket Bundling Komplit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA BANNER / ORDER CHANNEL ==================== -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto rounded-3xl fire-bg-gradient p-8 sm:p-12 text-center text-black shadow-2xl relative overflow-hidden">
+            <h2 class="font-display text-4xl sm:text-5xl uppercase tracking-tight">
+                SIAP RASAKAN LEDAKAN PEDASNYA?
+            </h2>
+            <p class="mt-3 text-sm sm:text-base font-bold max-w-xl mx-auto text-black/85">
+                Pesan langsung lewat keranjang website ini (bisa checkout via WhatsApp) atau kunjungi official store MADAS di marketplace kesayanganmu!
+            </p>
+            <div class="mt-7 flex flex-wrap justify-center gap-3">
+                <button onclick="toggleCart()" class="px-7 py-3.5 rounded-2xl bg-black text-madas-yellow font-extrabold text-sm hover:scale-105 transition-transform cursor-pointer shadow-lg">
+                    🛒 Buka Keranjang Belanja
+                </button>
+                <a href="#varian" class="px-7 py-3.5 rounded-2xl bg-white/90 hover:bg-white text-black font-extrabold text-sm transition-all">
+                    Lihat Semua Harga
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-black border-t border-white/10 pt-14 pb-8 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+            <div>
+                <div class="w-28 mb-2">
+                    <svg viewBox="0 0 340 275" class="w-full h-auto" aria-label="Logo MADAS Makaroni Pedas">
+                        <g fill="#D41414">
+                            <path d="M98,158 C78,155 62,140 58,118 C54,95 62,72 52,55 C65,62 72,72 72,58 C72,40 82,25 78,12 C92,24 96,42 102,32 C108,22 108,10 105,4 C118,15 122,34 128,28 C134,22 135,12 133,6 C145,18 148,38 142,58 C136,78 122,92 126,112 C130,126 144,124 150,114 C154,128 146,146 132,154 Z"/>
+                            <path d="M48,108 C42,102 42,92 48,86 C47,94 52,98 54,104 Z"/>
+                            <path d="M168,75 C175,58 188,48 184,34 C194,42 198,52 204,44 C210,36 208,24 205,18 C218,26 222,42 228,36 C234,30 236,20 234,14 C246,24 248,42 254,38 C260,34 264,25 262,18 C272,30 270,50 278,56 C284,60 288,52 290,46 C294,62 286,78 292,94 C298,110 296,132 282,148 C272,158 258,162 246,156 C248,136 244,114 226,104 C208,94 186,98 172,88 Z"/>
+                            <path d="M214,22 C222,12 238,10 248,16 C238,16 232,22 226,26 Z"/>
+                            <path d="M256,28 C264,22 274,24 278,32 C270,30 264,32 258,34 Z"/>
+                        </g>
+                        <path d="M108,42 C82,58 72,96 86,128 C98,154 128,168 158,164 C172,162 178,146 168,135 C146,138 124,128 116,108 C108,88 116,66 132,56 C140,50 122,34 108,42 Z" fill="#FFC845"/>
+                        <path d="M98,74 C92,92 96,114 108,130" fill="none" stroke="#FFE28A" stroke-width="5" stroke-linecap="round"/>
+                        <ellipse cx="121" cy="51" rx="14" ry="9" transform="rotate(-38 121 51)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                        <ellipse cx="163" cy="149" rx="14" ry="9" transform="rotate(32 163 149)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                        <path d="M154,94 C178,72 218,70 246,92 C270,110 278,142 266,166 C260,178 242,176 236,164 C244,144 238,122 220,110 C202,98 180,102 168,116 C160,124 142,105 154,94 Z" fill="#FFC845"/>
+                        <path d="M192,86 C212,84 232,92 246,108" fill="none" stroke="#FFE28A" stroke-width="5" stroke-linecap="round"/>
+                        <ellipse cx="160" cy="105" rx="14" ry="9" transform="rotate(42 160 105)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                        <ellipse cx="251" cy="166" rx="14" ry="9" transform="rotate(-30 251 166)" fill="#F5B027" stroke="#E09612" stroke-width="2"/>
+                        <g transform="translate(0, 8)">
+                            <g fill="#C81010" transform="translate(4, 6)">
+                                <path d="M22,250 L24,202 L20,194 L27,198 L30,190 L38,210 L44,218 L50,206 L55,190 L60,198 L66,192 L68,250 L54,250 L53,220 L44,236 L35,220 L34,250 Z"/>
+                                <path d="M76,250 L88,196 L92,190 L96,196 L101,189 L106,196 L120,250 L105,250 L102,238 L90,238 L88,250 Z M93,225 L100,225 L96,208 Z"/>
+                                <path d="M128,250 L129,195 L134,191 L139,195 L146,189 L152,195 C168,197 176,208 176,223 C176,239 167,250 148,250 Z M143,237 L149,237 C158,237 162,231 162,223 C162,214 158,208 149,208 L143,208 Z"/>
+                                <path d="M182,250 L194,196 L198,190 L202,196 L207,189 L212,196 L226,250 L211,250 L208,238 L196,238 L194,250 Z M199,225 L206,225 L202,208 Z"/>
+                                <path d="M232,236 L245,233 C247,238 252,240 258,240 C264,240 267,237 267,233 C267,229 262,228 253,226 C240,223 233,218 233,207 C233,196 242,190 254,190 L258,185 L263,191 L269,187 L273,193 L278,191 L277,204 L264,206 C262,202 259,200 254,200 C249,200 247,202 247,206 C247,209 251,211 260,213 C273,216 281,221 281,232 C281,244 271,251 257,251 C243,251 234,245 232,236 Z"/>
+                            </g>
+                            <g fill="#FFC845">
+                                <path d="M22,250 L24,202 L20,194 L27,198 L30,190 L38,210 L44,218 L50,206 L55,190 L60,198 L66,192 L68,250 L54,250 L53,220 L44,236 L35,220 L34,250 Z"/>
+                                <path d="M76,250 L88,196 L92,190 L96,196 L101,189 L106,196 L120,250 L105,250 L102,238 L90,238 L88,250 Z M93,225 L100,225 L96,208 Z"/>
+                                <path d="M128,250 L129,195 L134,191 L139,195 L146,189 L152,195 C168,197 176,208 176,223 C176,239 167,250 148,250 Z M143,237 L149,237 C158,237 162,231 162,223 C162,214 158,208 149,208 L143,208 Z"/>
+                                <path d="M182,250 L194,196 L198,190 L202,196 L207,189 L212,196 L226,250 L211,250 L208,238 L196,238 L194,250 Z M199,225 L206,225 L202,208 Z"/>
+                                <path d="M232,236 L245,233 C247,238 252,240 258,240 C264,240 267,237 267,233 C267,229 262,228 253,226 C240,223 233,218 233,207 C233,196 242,190 254,190 L258,185 L263,191 L269,187 L273,193 L278,191 L277,204 L264,206 C262,202 259,200 254,200 C249,200 247,202 247,206 C247,209 251,211 260,213 C273,216 281,221 281,232 C281,244 271,251 257,251 C243,251 234,245 232,236 Z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <p class="mt-2 text-xs sm:text-sm leading-relaxed text-gray-400">
+                    <strong>MADAS Makaroni Pedas</strong> — Camilan makaroni renyah dengan racikan cabai asli Indonesia yang menghadirkan <em>"Sensasi Pedas yang Meledak!!"</em> untuk Generasi Milenial dan Gen Z.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-extrabold text-white uppercase tracking-wider text-xs mb-4">Navigasi Cepat</h4>
+                <ul class="space-y-2.5 text-xs sm:text-sm">
+                    <li><a href="#varian" class="hover:text-madas-yellow transition-colors">Varian Rasa & Level Pedas</a></li>
+                    <li><a href="#kenapa" class="hover:text-madas-yellow transition-colors">Keunggulan Produk</a></li>
+                    <li><a href="#kuis-pedas" class="hover:text-madas-yellow transition-colors">Kuis Cek Level Pedas</a></li>
+                    <li><a href="#testimoni" class="hover:text-madas-yellow transition-colors">Ulasan Pelanggan</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-extrabold text-white uppercase tracking-wider text-xs mb-4">Official Store & Sosmed</h4>
+                <p class="text-xs text-gray-400 mb-3">Ikuti keseruan tantangan pedas MADAS setiap hari:</p>
+                <div class="flex gap-3">
+                    <a href="#varian" class="px-4 py-2 rounded-xl bg-madas-card hover:bg-madas-yellow hover:text-black font-bold text-xs transition-colors">TikTok @madas.pedas</a>
+                    <a href="#varian" class="px-4 py-2 rounded-xl bg-madas-card hover:bg-madas-orange hover:text-black font-bold text-xs transition-colors">Instagram @madas.id</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-2">
+            <p>&copy; 2026 MADAS Makaroni Pedas. All Rights Reserved.</p>
+            <p>Dibuat dengan 🔥 untuk Pecinta Pedas Indonesia.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SLIDE-OVER CART DRAWER ==================== -->
+    <div id="cart-overlay" onclick="toggleCart()" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-madas-dark border-l border-white/15 z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-white/10 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-xl">🔥</span>
+                <h3 class="font-display text-2xl uppercase tracking-wide text-white">Keranjang MADAS</h3>
+            </div>
+            <button onclick="toggleCart()" aria-label="Tutup Keranjang" class="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-gray-300 cursor-pointer">
+                ✕
+            </button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cart-items" class="flex-1 overflow-y-auto p-5 space-y-4">
+            <!-- Injected by JS -->
+        </div>
+
+        <!-- Drawer Footer / Checkout -->
+        <div class="p-5 border-t border-white/10 bg-black/50 space-y-4">
+            <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-400 font-medium">Total Pembayaran</span>
+                <span id="cart-total" class="font-display text-2xl text-madas-yellow">Rp 0</span>
+            </div>
+
+            <!-- Nama Pemesan -->
+            <div>
+                <label for="customer-name" class="block text-xs font-bold text-gray-400 mb-1">Nama Pemesan / Penerima</label>
+                <input type="text" id="customer-name" placeholder="Contoh: Budi Santoso" class="w-full px-3.5 py-2.5 rounded-xl bg-madas-card border border-white/15 text-sm text-white focus:outline-none focus:border-madas-yellow">
+            </div>
+
+            <button onclick="checkoutWhatsApp()" class="w-full py-3.5 rounded-xl fire-bg-gradient text-black font-extrabold text-sm tracking-wide hover:brightness-110 transition-all cursor-pointer shadow-lg flex items-center justify-center gap-2">
+                <span>Pesan Sekarang via WhatsApp</span>
+                <span>🚀</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- ==================== TOAST NOTIFICATION ==================== -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-madas-card border border-madas-yellow text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-sm font-bold">
+        <span class="text-lg">🔥</span>
+        <span id="toast-message">Ditambahkan ke keranjang!</span>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // Data Produk MADAS Makaroni Pedas
+        const products = [
+            {
+                id: 'lv1',
+                name: 'Pedas Manis Santuy',
+                level: 'Level 1',
+                category: 'mild',
+                spicePercent: 25,
+                badge: 'Ramah Pemula',
+                badgeColor: 'bg-madas-yellow/20 text-madas-yellow',
+                price: 12000,
+                weight: '100g',
+                desc: 'Perpaduan gurih renyah makaroni dengan sentuhan manis pedas ringan. Pas buat yang mau ngemil santai.'
+            },
+            {
+                id: 'lv3',
+                name: 'Pedas Daun Jeruk Nampol',
+                level: 'Level 3',
+                category: 'mild',
+                spicePercent: 55,
+                badge: 'Paling Laris',
+                badgeColor: 'bg-madas-orange/20 text-madas-orange',
+                price: 14000,
+                weight: '100g',
+                desc: 'Aroma irisan daun jeruk segar berpadu cabai asli yang gurih dan pedasnya pas bikin susah berhenti.'
+            },
+            {
+                id: 'lv5',
+                name: 'Pedas Cabai Asli Meledak',
+                level: 'Level 5',
+                category: 'extreme',
+                spicePercent: 80,
+                badge: 'Signature MADAS',
+                badgeColor: 'bg-madas-red/25 text-madas-crimson',
+                price: 15000,
+                weight: '100g',
+                desc: 'Sensasi pedas yang meledak di setiap gigitan! Diracik dari cabai rawit merah asli pilihan tanpa kompromi.'
+            },
+            {
+                id: 'lv10',
+                name: 'Neraka Jahanam Extra Hot',
+                level: 'Level 10',
+                category: 'extreme',
+                spicePercent: 100,
+                badge: 'Tantangan Ekstrem',
+                badgeColor: 'bg-red-600 text-white',
+                price: 17000,
+                weight: '100g',
+                desc: 'Khusus penakluk pedas sejati! Ledakan ekstra cabai rawit super pedas yang menguji nyali kamu dan circle-mu.'
+            }
+        ];
+
+        // State Keranjang & Kuis
+        let cart = [];
+        let quizState = { activity: null, tolerance: null };
+
+        // Format Rupiah
+        function formatRupiah(num) {
+            return 'Rp ' + num.toLocaleString('id-ID');
+        }
+
+        // Render Katalog Produk
+        function renderProducts(filter = 'all') {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? products 
+                : products.filter(p => p.category === filter);
+
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'bg-madas-card border border-white/10 rounded-3xl p-6 flex flex-col justify-between card-hover';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider ${product.badgeColor}">${product.badge}</span>
+                            <span class="text-xs font-extrabold text-gray-400">${product.weight}</span>
+                        </div>
+
+                        <!-- Visual Ikon Kemasan / Level -->
+                        <div class="h-28 rounded-2xl bg-black/60 border border-white/5 flex flex-col items-center justify-center mb-4 relative overflow-hidden">
+                            <span class="font-display text-3xl fire-gradient-text tracking-wider">${product.level}</span>
+                            <span class="text-[11px] text-gray-400 font-semibold mt-0.5">MADAS CRUNCHY</span>
+                        </div>
+
+                        <h3 class="text-lg font-extrabold text-white leading-snug">${product.name}</h3>
+                        <p class="text-xs text-gray-400 mt-2 leading-relaxed">${product.desc}</p>
+
+                        <!-- Spice Meter Bar -->
+                        <div class="mt-4">
+                            <div class="flex justify-between text-[11px] font-bold mb-1">
+                                <span class="text-gray-400">Tingkat Kepedasan</span>
+                                <span class="text-madas-orange">${product.spicePercent}%</span>
+                            </div>
+                            <div class="w-full h-2 bg-black rounded-full overflow-hidden">
+                                <div class="h-full fire-bg-gradient rounded-full" style="width: ${product.spicePercent}%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-gray-400 block">Harga</span>
+                            <span class="font-display text-xl text-madas-yellow">${formatRupiah(product.price)}</span>
+                        </div>
+                        <button onclick="addToCart('${product.id}')" class="px-4 py-2.5 rounded-xl fire-bg-gradient text-black font-extrabold text-xs hover:brightness-110 active:scale-95 transition-all cursor-pointer">
+                            + Keranjang
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Produk
+        function filterProducts(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.className = 'filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-madas-yellow text-black transition-all cursor-pointer';
+                } else {
+                    btn.className = 'filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-madas-card text-gray-300 hover:text-white border border-white/10 transition-all cursor-pointer';
+                }
+            });
+            renderProducts(category);
+        }
+
+        // Hero Quick Spice Preview
+        function previewSpice(level, label, glowColor) {
+            document.getElementById('hero-heat-label').textContent = label;
+            document.getElementById('hero-glow-circle').style.backgroundColor = glowColor;
+            showToast(`Simulasi: ${label}`);
+        }
+
+        // Tambah ke Keranjang
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            updateCartUI();
+            showToast(`${product.name} masuk keranjang!`);
+        }
+
+        // Ubah Kuantitas Keranjang
+        function updateQty(productId, delta) {
+            const index = cart.findIndex(item => item.id === productId);
+            if (index === -1) return;
+
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        // Render UI Keranjang
+        function updateCartUI() {
+            const badge = document.getElementById('cart-badge');
+            const itemsContainer = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            badge.textContent = totalQty;
+            totalEl.textContent = formatRupiah(totalPrice);
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = `
+                    <div class="text-center py-16 space-y-3">
+                        <span class="text-4xl block">🌶️</span>
+                        <p class="font-bold text-gray-300">Keranjangmu masih kosong nih!</p>
+                        <p class="text-xs text-gray-500">Pilih varian makaroni pedas favoritmu dulu yuk.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            itemsContainer.innerHTML = cart.map(item => `
+                <div class="bg-madas-card border border-white/10 rounded-2xl p-4 flex items-center justify-between gap-3">
+                    <div>
+                        <span class="text-[10px] font-extrabold uppercase text-madas-orange">${item.level}</span>
+                        <h4 class="font-bold text-sm text-white">${item.name}</h4>
+                        <p class="text-xs text-madas-yellow font-bold mt-1">${formatRupiah(item.price * item.qty)}</p>
+                    </div>
+                    <div class="flex items-center gap-2 bg-black rounded-xl p-1 border border-white/10">
+                        <button onclick="updateQty('${item.id}', -1)" class="w-7 h-7 rounded-lg hover:bg-white/10 text-white font-bold cursor-pointer">-</button>
+                        <span class="text-xs font-extrabold w-5 text-center">${item.qty}</span>
+                        <button onclick="updateQty('${item.id}', 1)" class="w-7 h-7 rounded-lg hover:bg-white/10 text-white font-bold cursor-pointer">+</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Toggle Cart Drawer
+        function toggleCart() {
+            const overlay = document.getElementById('cart-overlay');
+            const drawer = document.getElementById('cart-drawer');
+            const isHidden = overlay.classList.contains('hidden');
+
+            if (isHidden) {
+                overlay.classList.remove('hidden');
+                setTimeout(() => drawer.classList.remove('translate-x-full'), 10);
+            } else {
+                drawer.classList.add('translate-x-full');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // Checkout WhatsApp Simulation
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                showToast('Keranjang masih kosong! Pilih varian dulu ya.');
+                return;
+            }
+            const nameInput = document.getElementById('customer-name').value.trim() || 'Sobat Pedas';
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            
+            let orderLines = cart.map((item, i) => `${i + 1}. ${item.name} (${item.level}) x${item.qty} = ${formatRupiah(item.price * item.qty)}`).join('%0A');
+            let message = `Halo Admin MADAS Makaroni Pedas! 🔥%0ASaya *${encodeURIComponent(nameInput)}* mau pesan:%0A%0A${orderLines}%0A%0A*Total: ${formatRupiah(totalPrice)}*%0AMohon info ongkir dan pembayarannya ya!`;
+            
+            window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+        }
+
+        // Quiz Interaktif Logic
+        function selectQuizOption(type, value, btnEl) {
+            quizState[type] = value;
+            document.querySelectorAll(`.quiz-btn-${type}`).forEach(btn => {
+                btn.classList.remove('border-madas-yellow', 'bg-madas-yellow/15', 'text-madas-yellow');
+                btn.classList.add('border-white/15', 'bg-black/60');
+            });
+            btnEl.classList.remove('border-white/15', 'bg-black/60');
+            btnEl.classList.add('border-madas-yellow', 'bg-madas-yellow/15', 'text-madas-yellow');
+        }
+
+        function calculateRecommendation() {
+            if (!quizState.activity || !quizState.tolerance) {
+                showToast('Pilih kedua jawaban dulu ya biar akurat!');
+                return;
+            }
+
+            let recId = 'lv3';
+            if (quizState.tolerance === 'low') {
+                recId = 'lv1';
+            } else if (quizState.tolerance === 'mid') {
+                recId = quizState.activity === 'nugas' ? 'lv5' : 'lv3';
+            } else if (quizState.tolerance === 'high') {
+                recId = quizState.activity === 'nongkrong' ? 'lv10' : 'lv5';
+            }
+
+            const recProduct = products.find(p => p.id === recId);
+            document.getElementById('rec-title').textContent = `${recProduct.level} — ${recProduct.name}`;
+            document.getElementById('rec-desc').textContent = recProduct.desc;
+            
+            const addBtn = document.getElementById('rec-add-btn');
+            addBtn.onclick = () => {
+                addToCart(recProduct.id);
+                toggleCart();
+            };
+
+            document.getElementById('quiz-result').classList.remove('hidden');
+        }
+
+        function resetQuiz() {
+            quizState = { activity: null, tolerance: null };
+            document.querySelectorAll('.quiz-btn-activity, .quiz-btn-tolerance').forEach(btn => {
+                btn.classList.remove('border-madas-yellow', 'bg-madas-yellow/15', 'text-madas-yellow');
+                btn.classList.add('border-white/15', 'bg-black/60');
+            });
+            document.getElementById('quiz-result').classList.add('hidden');
+        }
+
+        // Toast Helper
+        let toastTimeout;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 2600);
+        }
+
+        // Init saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts('all');
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>
